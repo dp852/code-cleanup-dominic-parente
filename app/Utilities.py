@@ -1,6 +1,8 @@
 from unicodedata import name
 
 
+
+
 def to_usd(my_price):
     """
     This is a doc string. It tells us what this function is about. 
