@@ -8,9 +8,10 @@ import os
 from app.Utilities import to_usd
 
 # checks to see if a products.csv file exists. If not, it uses the default
-if os.path.isfile(os.path.join(os.path.dirname(__file__), "..", "data", "products.csv")) == True:
+csv_filepath = os.path.join(os.path.dirname(__file__), "..", "data", "products.csv")
+if os.path.isfile(csv_filepath) == True:
     print("USING CUSTOM PRODUCTS CSV FILE...")
-    csv_filepath = os.path.join(os.path.dirname(__file__), "..", "data", "products.csv")
+    #csv_filepath = csv_filepath
 else:
     print("USING DEFAULT PRODUCTS CSV FILE...")
     csv_filepath = os.path.join(os.path.dirname(__file__), "..", "data", "default_products.csv")
@@ -32,13 +33,15 @@ print("---------")
 print("THERE ARE", len(products), "PRODUCTS:")
 print("---------")
 
-for p in products:
-    print("..." + p["name"] + "   " + to_usd(p["price"]))
-
-
 all_prices = []
 for p in products:
+    print("..." + p["name"] + "   " + to_usd(p["price"]))
     all_prices.append(float(p["price"]))
+
+
+#all_prices = []
+#for p in products:
+    #all_prices.append(float(p["price"]))
 
 import statistics
 avg_price = statistics.median(all_prices)

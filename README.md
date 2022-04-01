@@ -45,3 +45,19 @@ Run the game:
 ```sh
 python app/game.py
 ```
+
+```sh
+python -m app.crypto
+```
+
+```sh
+python -m app.stocks
+```
+
+## Testing
+
+Run tests:
+
+```sh
+pytest
+```
