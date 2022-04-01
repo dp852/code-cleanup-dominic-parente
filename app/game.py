@@ -7,6 +7,10 @@ from random import choice
 
 
 def determine_winner(user_choice, computer_choice):
+    """
+    This function tells the player who won based on 
+    the player and computer selections.
+    """
     #return "paper"
     winners = {
         "rock": {
@@ -83,12 +87,6 @@ if __name__ == "__main__":
     #    print("It's a tie!")
 
     winner = determine_winner(u,c)
-    """
-    This function determines who 
-    won based on the choice you made
-    (Rock, Paper, Scissors) and the 
-    computer's choice.
-    """
     if winner == u:
         print("YOU WON")
     elif winner == c:
