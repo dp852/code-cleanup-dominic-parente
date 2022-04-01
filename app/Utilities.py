@@ -1,7 +1,3 @@
-from unicodedata import name
-
-
-
 
 def to_usd(my_price):
     """
